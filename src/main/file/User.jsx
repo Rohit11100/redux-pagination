@@ -9,14 +9,14 @@ import {nanoid} from 'nanoid';
         
     }
     render() {
-        const {users} = this.props.users;
-        console.log(users);
+        const mm = this.props.a;
+        
        
 
         
         return (
             <div>
-                {users.map(u => 
+                {mm.map(u => 
                      <React.Fragment key={nanoid()}>
                          <h6 >{u.name}</h6> 
                      </React.Fragment>
@@ -27,7 +27,7 @@ import {nanoid} from 'nanoid';
 }
 
 const mapStateToProps  = (state) => ({
-    users:state.users,
+    a:state.rA.users,
     
 })
 

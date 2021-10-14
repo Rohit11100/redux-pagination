@@ -8,7 +8,7 @@ export const getUsers = () => async dispatch => {
     try{
         
         const res = await axios.get(`https://api.instantwebtools.net/v1/passenger?page=1&size=20`)
-       console.log(res.data);
+       
         let my =res.data.data;
         let mys=res.data.totalPassengers;
         let myres=my.map((q)=>{
@@ -19,7 +19,7 @@ export const getUsers = () => async dispatch => {
         dispatch( {
             type: GET_USERS,
             payload: myres,
-            totelvalue:mys
+            
         })
     }
     catch(e){
